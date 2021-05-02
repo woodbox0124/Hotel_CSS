@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+   <properties resource="com/config/jdbc.properties" />
+   
+   <typeAliases>
+    <typeAlias type="com.dto.RoomDTO" alias="RoomDTO"/>
+    <typeAlias type="com.dto.MemberDTO" alias="MemberDTO"/>
+    <typeAlias type="com.dto.HotelDTO" alias="HotelDTO"/>
+    <typeAlias type="com.dto.ResvDTO" alias="ResvDTO"/>
+    <typeAlias type="com.dto.ResvMyDTO" alias="ResvMyDTO"/>
+    <typeAlias type="com.dto.RoomInfoDTO" alias="RoomInfoDTO"/>
+   </typeAliases>
+   
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${xxx}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/config/HotelMapper.xml" />
+		<mapper resource="com/config/MemberMapper.xml" />
+		<mapper resource="com/config/ResvMapper.xml" />
+	</mappers>
+</configuration>
+
+
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MemberMapper">
+	<insert id="memberAdd" parameterType="MemberDTO">
+insert into member(u_id, u_pw, u_name, u_email, u_phone)  
+values(#{u_id}, #{u_pw}, #{u_name}, #{u_email}, #{u_phone})
+</insert>
+<select id="login" parameterType="hashmap" resultType="MemberDTO">
+	  select u_id ,u_pw ,u_name, u_email, u_phone
+      from member
+      where u_id = #{u_id} and u_pw = #{u_pw}
+	</select>
+	
+	<select id="mypage" resultType="MemberDTO" parameterType="string">
+	select * from member where u_id = #{u_id}
+	</select>
+	
+	<select id="idCheck" parameterType="string" resultType="int">
+select count(*) from member where u_id = #{u_id}
+</select>
+
+<update id="memberUpdate" parameterType="MemberDTO">
+update member set  
+     U_PW = #{u_pw}, 
+     U_NAME = #{u_name}, 
+     U_EMAIL = #{u_email},
+     U_PHONE = #{u_phone}
+    where U_ID = #{u_id}
+   </update>
+   
+   <delete id="memberDelete" parameterType="string">
+	delete from member where u_id = #{u_id}
+	</delete>
+	<select id="pwChk" parameterType="string" resultType="int">
+	select count(*) from member where u_pw = #{u_pw}
+	</select>
+</mapper>

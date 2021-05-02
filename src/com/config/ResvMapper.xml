@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ResvMapper">
+	<insert id="resvInsert" parameterType="resvDTO">
+		insert into RESV 
+		values(resv_seq.nextval,#{hotelseq},#{u_id},#{roomseq},#{checkin},#{checkout},SYSDATE, #{price},#{guest},null) 
+	</insert>
+	<select id="resvMy" resultType="ResvMyDTO" parameterType="string">
+select re.seq, h.rating, h.name hotelName, h.addr, ro.name roomName, re.checkin, re.checkout, re.resvdate, re.guest, re.price, re.cancel 
+from Hotel h, resv re, room ro  
+where h.seq = re.hotelseq and re.roomseq = ro.seq and re.u_id = #{u_id}
+</select>
+	
+	<update id="resvCancel" parameterType="int">
+	update resv set  
+     cancel = 1
+    where seq = #{seq}
+	
+	</update>
+</mapper>

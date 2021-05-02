@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="HotelMapper">
+<select id="hotelList" parameterType="string" resultType="HotelDTO" >
+	select * from hotel
+</select>
+
+<select id="hotelLoc" parameterType="string" resultType="HotelDTO">
+	select * from hotel where place= #{location}
+</select>
+
+<select id="totalCount" parameterType="string" resultType="int">
+	select count(*) from hotel where place= #{location}
+</select>
+<select id="totalCount1" parameterType="string" resultType="int">
+	select count(*) from hotel 
+</select>
+
+<select id="roomList" resultType="RoomDTO" parameterType="string">
+	select * from room where hotelseq=#{seq}
+</select>
+
+
+<!-- 호텔리스트 검색 기능  -->
+<select id="searchKey" parameterType="string" resultType="HotelDTO">
+	select * from hotel where place = #{place}
+</select>
+
+<!-- 룸 info select-->
+<select id="roomInfo" resultType="RoomInfoDTO" parameterType="string">
+select * from roominfo where r_seq=#{seq} order by r_seq
+</select>
+
+<select id="roomList2" resultType="RoomDTO" parameterType="string">
+	select * from room where seq=#{seq}
+</select>
+</mapper>
