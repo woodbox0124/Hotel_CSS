@@ -38,7 +38,7 @@ $(document).ready(function() {
 <html>
     <head>
         <title>로그인 & 회원가입</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="assets/css/login_register.css">
     </head>
     <body>
 
