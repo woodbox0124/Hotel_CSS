@@ -1,12 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 <head>
 <title>Aerial by HTML5 UP</title>
@@ -15,17 +9,13 @@
 <link rel="stylesheet" type="text/css"
 	href="styles/bootstrap-4.1.2/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
-
 <!-- main배경 css 끝 -->
 <!-- 글꼴 CSS 시작 -->
 <link rel="stylesheet" type="text/css" href="assets/css/font.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link
-	href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 <!-- 글꼴 CSS 끝 -->
 <!-- 달력 쿼리  -->
 <link rel="stylesheet" href="./jquery-ui-1.12.1/jquery-ui.min.css">

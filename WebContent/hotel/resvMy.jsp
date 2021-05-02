@@ -3,26 +3,12 @@
 <%@page import="java.util.List"%>
 <%@page import="com.dto.ResvDTO"%>
 <%@page import="com.dto.MemberDTO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE HTML>
-
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-<head>
-<!-- 글꼴 -->
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!-- 글꼴 CSS 시작-->
 <link rel="stylesheet" type="text/css" href="assets/css/font.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link
-	href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-	rel="stylesheet">
-<!-- 글꼴 -->
 <link rel="stylesheet" type="text/css" href="assets/css/default.css">
-<!-- table css 시작 -->
+<!-- 글꼴 CSS 끝-->
+<!-- table CSS 시작 -->
 <style type="text/css">
 * {
 	font-family: 'twayair', 'Roboto', 'sans-serif' !important;
@@ -46,10 +32,8 @@ h1 {
 }
 </style>
 <!-- jQuery 시작 -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
-
  $(function() {
      $(".cancel").click(function() {
         var seq = $(this).attr("data-xxx");
@@ -60,18 +44,8 @@ h1 {
  });
 </script>
 <!-- jQuery 끝-->
-<!-- table css 끝 -->
 <title>예약확인</title>
 <meta charset="utf-8">
-<!-- main배경 css -->
-<link rel="stylesheet" type="text/css"
-	href="styles/bootstrap-4.1.2/bootstrap.min.css">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, user-scalable=no" />
-<noscript>
-	<link rel="stylesheet" href="assets/css/noscript.css" />
-</noscript>
-<!-- main배경 css 끝 -->
 <%
    String mesg = (String)session.getAttribute("mesg");
    if(mesg!=null){
@@ -92,21 +66,14 @@ session.removeAttribute("mesg");
 %>
 
 
-<body class="is-preload">
-	<div id="wrapper">
-		<div id="bg"></div>
-		<div id="overlay"></div>
-		<div id="main">
-			<!-- Header -->
-			<header id="header">
+		
 				<form action="MemberUpdateServlet">
 					<table class="container">
 						<tbody>
 							<tr>
 								<td colspan="2">
 									<center>
-										<h1><%=mu_name%>님의 예약정보
-										</h1>
+										<h1><%=mu_name%>님의 예약정보</h1>
 									</center>
 								</td>
 							</tr>
@@ -142,9 +109,7 @@ session.removeAttribute("mesg");
 		int price = dto.getPrice();
 		int cancel = dto.getCancel();
 		
-		if(cancel ==  0){
-			
-		
+		if(cancel ==  0){					
 	%>
 
 							<tr>
@@ -159,35 +124,16 @@ session.removeAttribute("mesg");
 								<td><%= guest %></td>
 								<td><%= price %></td>
 							
-
 								<td>
-									<button type="button" class="btn btn-outline-primary"
-										style="margin-bottom: 15px">수정</button>
+		<button type="button" class="btn btn-outline-primary" style="margin-bottom: 15px">수정</button>
 								</td>
 								<td>
 								<button type="button" class="btn btn-outline-primary cancel"
 									style="margin-bottom: 15px" data-xxx="<%=seq%>">취소</button>
 								</td>
 							</tr>
-							<%
-  
-	}
-	}
-    %>
+			<%}
+	}%>
 						</tbody>
-
 					</table>
-
-
-
 				</form>
-</header>
-</div>
-				<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-		</div>
-</body>
-</html>

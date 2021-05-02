@@ -1,4 +1,3 @@
-
 <%@page import="com.dto.PageDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -6,13 +5,19 @@
 <%@ page import="java.util.List"%>
 
 <head>
-
+<!-- 부트스트랩 CDN 시작-->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<!-- 부트스트랩 CDN 끝-->
+<!-- 글꼴 CSS 시작 -->
 <link rel="stylesheet" type="text/css" href="assets/css/font.css">
 <link rel="stylesheet" type="text/css" href="assets/css/default.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<!-- 글꼴 CSS 끝 -->
+<!-- hotelList.CSS 시작 -->
+<link rel="stylesheet" type="text/css" href="assets/css/hotelList.css">
+<!-- hotelList.CSS 끝 -->
+<!-- JQuery 시작 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -47,190 +52,10 @@
 		})
 	})
 </script>
+<!-- JQuery 끝 -->
 <meta charset="UTF-8">
-
 <!-- 카카오 지도 불러오기 -->
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=39d2b4ae6de92d2bfb3a0a214f2d3d4e"></script>
-
-<style>
-* {
-	font-family: 'twayair', 'Roboto', 'sans-serif' !important;
-}
-#container {
-	overflow: hidden;
-	height: 280px;
-	width: 280px;
-	position: relative;
-	position: sticky;
-}
-
-#btnRoadview, #btnMap {
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	padding: 7px 12px;
-	font-size: 14px;
-	border: 1px solid #dbdbdb;
-	background-color: #fff;
-	border-radius: 2px;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
-	z-index: 1;
-	cursor: pointer;
-}
-
-#btnRoadview:hover, #btnMap:hover {
-	background-color: #fcfcfc;
-	border: 1px solid #c1c1c1;
-}
-
-#container.view_map #mapWrapper {
-	z-index: 10;
-}
-
-#map {
-	border-radius: 10px;
-}
-
-#container.view_map #btnMap {
-	display: none;
-}
-
-#container.view_roadview #mapWrapper {
-	z-index: 0;
-}
-
-#container.view_roadview #btnRoadview {
-	display: none;
-}
-
-.section {
-	width: 100%;
-	height: 100%;
-}
-
-.wrapper {
-	width: 1200px;
-	height: 1000px;
-	margin: 0 auto;
-}
-
-
-.wrapper .filter, .cards{
-	float: left;
-}
-
-.section .filter {
-	width: 280px;
-	height: 920px;
-	margin: 0 20px;
-}
-
-
-.section .cards {
-	width: 880px;
-}
-
-.cards .card {
-	width: 380px;
-	height: 400px;
-	margin: 30px;
-	float: left;
-}
-
-img {
-	width: 100%;
-	height: 100%;
-}
-
-#place {
-	position: absolute;
-	right: 9px;
-}
-
-.card-body>.btn {
-	position: absolute;
-	right: 9px;
-	bottom: 9px;
-}
-
-.card-body {
-	height: 170px;
-}
-
-#people>a {
-	display: inline-block;
-	width: 20px;
-	text-align: center;
-	font-size: 20px;
-	text-decoration: none;
-}
-
-.booking_input {
-	width: 80%;
-	height: 40px;
-	background: rgba(255, 255, 255, 0.2);
-	border: solid 2px #ccc;
-	padding-left: 27px;
-	font-size: 16px;
-	font-weight: 700;
-	color: #000000;
-	outline: none;
-	margin: 20px 0;
-}
-
-.input_btn {
-	margin: 5px;
-}
-
-#filter {
-	margin: 0 auto;
-	text-align: center;
-}
-
-/* footer */
-#footer {
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-}
-
-.sns_box {
-	width: 56px;
-	height: 25px;
-	margin: 0 auto;
-}
-
-.sns_box>a {
-	width: 25px;
-	display: inline-block;
-	float: left;
-	margin: 0 1.5px;
-}
-
-#certy {
-	width: 1200px;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.foo {
-	float: left;
-	margin: 20px 30px;
-	text-align: left;
-}
-
-#footer_wrap {
-	width: 1200px;
-	height: 260px;
-	margin: 0 auto;
-	text-align: center;
-}
-.page{
-	font-size:20px;
-	text-align:center;
-}
-</style>
-
 </head>
 	<div class="section">
 		<div class="wrapper">

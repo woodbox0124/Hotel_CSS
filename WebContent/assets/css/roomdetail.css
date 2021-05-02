@@ -1,0 +1,92 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+.header{
+	font-size: 50px;
+	padding-bottom: 20px;
+}
+
+
+.room {
+	padding-top: 50px;
+	
+}
+
+.roompic{
+	width: 600px;
+	height: 300px;
+	display: block;
+	margin: auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  max-height: 750px;
+  position: relative;
+  margin: auto;
+  
+}
+.slideshow-container .mySlides img {
+  padding-top : 50px;
+  height: 400px;
+}
+
+/* 앞뒤 버튼 */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/*이미지 다음버튼 */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+p{
+	padding-left: 500px;
+	font-size: 30px;
+}
+
+#aa>#bb{
+float: left;
+}
+#jj{
+text-align: center;}

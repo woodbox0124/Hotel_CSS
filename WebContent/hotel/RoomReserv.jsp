@@ -3,13 +3,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	
-<!DOCTYPE html>
-<html>
 <head>
 <meta charset="UTF-8">
 <title>예약</title>
-
-
 <%
 String hotelname = request.getParameter("hotelname");
 String hotelseq = request.getParameter("hotelseq");
@@ -29,75 +25,13 @@ String phone = dto.getU_phone();
 
 System.out.println("roomjsp : " + checkin + "\t" + checkout + "\t" + guest + "\t" + hotelseq + "\t" + roomseq +"\t" + price + "\t" + u_id + "\t" + phone) ;
 %>
-<style type="text/css">
-@font-face {
-    font-family: 'twayair';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-* {
- 	color: black;
-	font-family: 'twayair';
-	font-size: 20pt;
-
-}
-body{
- background-image: url("assets/css/images/night.jpg");
- background-size: auto;
-}
-a {
-	font-size: 40px;
-}
-.room {
-	margin-left: 8%;
-	font-size : 30px;
-}
-.number {
-	font-size: 30px;
-	width: 200px;
-}
-.date {
-	font-size: 20px;
-}
-.button {
-	left: 35%;
-	text-align :center;
-	color: #fff;
-	position: relative;
-	font-size: 50px;
-	font-weight: 500;
-	background: #ff3d1c;
-	border-radius: 10px;
-	color: #fff;
-}
-
-.hotelseq {
-	font-size: 50px;
-}
-
-
-.list-caption {
-	top : 100px;
-	background-color: white;
-	border: 3px solid black;
-	margin-left: 300px;
-	margin-right: 300px;
-	position: relative;
-}
-
-.main {
- 	margin-bottom:500px;
- 	color : white;
- 	text-decoration-line: none;
-}
-</style>
-
+<!-- RoomReserv CSS 시작 -->
+<link rel="stylesheet" type="text/css" href="assets/css/RoomReserv.css">
+<!-- RoomReserv CSS 끝 -->
 </head>
 <body>
 	<a href="MainServlet" class="main">Hotel UnderBar</a>
-	<form action="KakaopayServlet">
-	
+	<form action="KakaopayServlet">	
 	<!-- kakao pay 값 전달을 위한 코드 -->
 	<input type="hidden" name="roomseq" value="<%=roomseq%>">
 	<input type="hidden" name="location" value="<%=location%>">
@@ -108,8 +42,7 @@ a {
 	<input type="hidden" name="u_id" value="<%=u_id%>">
 	<input type="hidden" name="name" value="<%=name%>">
 	<input type="hidden" name="phone" value="<%=phone%>">
-	<input type="hidden" name="price" value="<%=price%>">
-	
+	<input type="hidden" name="price" value="<%=price%>">	
 		<div class="list-caption">
 		<p class="hotelseq" style="text-align: center;">
 				호텔이름 : <%=hotelname%></p> <br>
@@ -124,12 +57,8 @@ a {
 				예약자 이름 : <%=u_id%><br> 
 				예약자 전화번호 : <input class="number" type="text"
 					value="<%=phone%>"> <br><br>
-					요금 : <%=price%><br>
-					
+					요금 : <%=price%><br>					
 			</div>
 			<p><button class="button">결제하기</button></p>
 		</div>
 	</form>
-
-</body>
-</html>

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+* {
+	font-family: 'twayair', 'Roboto', 'sans-serif' !important;
+}
+.cards {
+	width: 1200px;
+	height:600px;
+	margin:0 auto;
+	
+}
+
+.cards .card {
+	width: 450px;
+	height: 500px;
+	margin: 30px;
+	float:left;
+	
+}
+
+#aa{
+	margin:0 auto;
+	width:1020px;
+	height:100%;
+}
+img {
+	width: 100%;
+	height: 100%;
+}
+#wrapper{
+	width:100%;
+	
+}
+#resv{
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 14px;
+    color:#000;
+}

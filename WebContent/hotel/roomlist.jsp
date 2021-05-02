@@ -1,62 +1,18 @@
 <%@page import="com.dto.HotelDTO"%>
 <%@page import="com.dto.MemberDTO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.dto.RoomDTO"%>
 <%@ page import="java.util.List"%>
 <head>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 <!-- 글꼴 CSS 시작-->
 <link rel="stylesheet" type="text/css" href="assets/css/font.css">
 <link rel="stylesheet" type="text/css" href="assets/css/default.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link
-	href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-	rel="stylesheet">
 <!-- 글꼴 CSS 끝-->
-<style type="text/css">
-* {
-	font-family: 'twayair', 'Roboto', 'sans-serif' !important;
-}
-.cards {
-	width: 1200px;
-	height:600px;
-	margin:0 auto;
-	
-}
-
-.cards .card {
-	width: 450px;
-	height: 500px;
-	margin: 30px;
-	float:left;
-	
-}
-
-#aa{
-	margin:0 auto;
-	width:1020px;
-	height:100%;
-}
-img {
-	width: 100%;
-	height: 100%;
-}
-#wrapper{
-	width:100%;
-	
-}
-#resv{
-    font-size: 20px;
-    position: absolute;
-    right: 10px;
-    bottom: 14px;
-    color:#000;
-}
-
-</style>
+<!-- roomlist CSS 시작-->
+<link rel="stylesheet" type="text/css" href="assets/css/roomlist.css">
+<!-- roomlist CSS 끝-->
+<!-- jQuery 시작 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 
 	var bDisplay = true;
@@ -68,10 +24,8 @@ img {
             con.style.display = 'block';
         }
     }  	
-
 </script>
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<!-- jQuery 끝 -->
 </head>
 	<div id="wrapper">
 	<div class="cards">
@@ -123,7 +77,6 @@ for(int i=0; i<list.size(); i++){
 				</ul>
 			</div>
 		</div>
-
 		<%} %>
 		</div>
 </div>		

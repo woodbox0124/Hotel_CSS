@@ -1,0 +1,177 @@
+@charset "UTF-8";
+* {
+	font-family: 'twayair', 'Roboto', 'sans-serif' !important;
+}
+#container {
+	overflow: hidden;
+	height: 280px;
+	width: 280px;
+	position: relative;
+	position: sticky;
+}
+
+#btnRoadview, #btnMap {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	padding: 7px 12px;
+	font-size: 14px;
+	border: 1px solid #dbdbdb;
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+	z-index: 1;
+	cursor: pointer;
+}
+
+#btnRoadview:hover, #btnMap:hover {
+	background-color: #fcfcfc;
+	border: 1px solid #c1c1c1;
+}
+
+#container.view_map #mapWrapper {
+	z-index: 10;
+}
+
+#map {
+	border-radius: 10px;
+}
+
+#container.view_map #btnMap {
+	display: none;
+}
+
+#container.view_roadview #mapWrapper {
+	z-index: 0;
+}
+
+#container.view_roadview #btnRoadview {
+	display: none;
+}
+
+.section {
+	width: 100%;
+	height: 100%;
+}
+
+.wrapper {
+	width: 1200px;
+	height: 1000px;
+	margin: 0 auto;
+}
+
+
+.wrapper .filter, .cards{
+	float: left;
+}
+
+.section .filter {
+	width: 280px;
+	height: 920px;
+	margin: 0 20px;
+}
+
+
+.section .cards {
+	width: 880px;
+}
+
+.cards .card {
+	width: 380px;
+	height: 400px;
+	margin: 30px;
+	float: left;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+#place {
+	position: absolute;
+	right: 9px;
+}
+
+.card-body>.btn {
+	position: absolute;
+	right: 9px;
+	bottom: 9px;
+}
+
+.card-body {
+	height: 170px;
+}
+
+#people>a {
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.booking_input {
+	width: 80%;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.2);
+	border: solid 2px #ccc;
+	padding-left: 27px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #000000;
+	outline: none;
+	margin: 20px 0;
+}
+
+.input_btn {
+	margin: 5px;
+}
+
+#filter {
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* footer */
+#footer {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.sns_box {
+	width: 56px;
+	height: 25px;
+	margin: 0 auto;
+}
+
+.sns_box>a {
+	width: 25px;
+	display: inline-block;
+	float: left;
+	margin: 0 1.5px;
+}
+
+#certy {
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.foo {
+	float: left;
+	margin: 20px 30px;
+	text-align: left;
+}
+
+#footer_wrap {
+	width: 1200px;
+	height: 260px;
+	margin: 0 auto;
+	text-align: center;
+}
+.page{
+	font-size:20px;
+	text-align:center;
+}

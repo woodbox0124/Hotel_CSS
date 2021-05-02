@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+ 	color: black;
+	font-family: 'twayair';
+	font-size: 20pt;
+
+}
+body{
+ background-image: url("assets/css/images/night.jpg");
+ background-size: auto;
+}
+a {
+	font-size: 40px;
+}
+.room {
+	margin-left: 8%;
+	font-size : 30px;
+}
+.number {
+	font-size: 30px;
+	width: 200px;
+}
+.date {
+	font-size: 20px;
+}
+.button {
+	left: 35%;
+	text-align :center;
+	color: #fff;
+	position: relative;
+	font-size: 50px;
+	font-weight: 500;
+	background: #ff3d1c;
+	border-radius: 10px;
+	color: #fff;
+}
+
+.hotelseq {
+	font-size: 50px;
+}
+
+
+.list-caption {
+	top : 100px;
+	background-color: white;
+	border: 3px solid black;
+	margin-left: 300px;
+	margin-right: 300px;
+	position: relative;
+}
+
+.main {
+ 	margin-bottom:500px;
+ 	color : white;
+ 	text-decoration-line: none;
+}
